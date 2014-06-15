@@ -9,13 +9,22 @@
 #import <UIKit/UIKit.h>
 #import "DetailViewController.h"
 
-@interface ViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
+@interface ViewController : UIViewController <UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate,UIGestureRecognizerDelegate>
 {
     IBOutlet UITableView *table;
     
     NSMutableArray *nameArray;
     NSMutableArray *imageArray;
     NSMutableArray *proArray;
+    
+    IBOutlet UITextField *name1;
+    IBOutlet UITextField *name2;
+    IBOutlet UILabel *name3;
+    IBOutlet UILabel *pass;
+    
+    NSMutableArray *userArray;
 }
+
+-(IBAction)load;
 
 @end
