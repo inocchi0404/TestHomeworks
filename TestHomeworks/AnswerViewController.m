@@ -15,21 +15,26 @@
 
 @implementation AnswerViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	// Do any additional setup after loading the view, typically from a nib.
     table.delegate = self;
     table.dataSource = self;
+    
+    userArray = [[NSMutableArray alloc] init];
+    
+    
+    nameArray = [[NSMutableArray alloc]initWithObjects:
+                 @"az",
+                 @"inocchi",
+                 @"massy", nil];
+    
+    imageArray = [[NSMutableArray alloc]initWithObjects:
+                  [UIImage imageNamed:@"azu.jpg"],
+                  [UIImage imageNamed:@"まっしー.jpg"],
+                  [UIImage imageNamed:@"inocchi.jpg"], nil];
     
     PFQuery *query = [PFQuery queryWithClassName:@"User"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -48,6 +53,7 @@
             // データの呼び出しに失敗
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         } }];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,23 +67,7 @@
 {
     return [userArray count];
 }
-/*
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSString *cellIdentifer = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifer];
-    
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifer];
-    }
-    
-    cell.textLabel.text = [userArray objectAtIndex:indexPath.row];
-    //cell.imageView.image = [imageArray objectAtIndex:indexPath.row];
-    //cell.detailTextLabel.text = [proArray objectAtIndex:indexPath.row];
-    
-    return cell;
-}
-*/
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *cellIdentifer = @"Cell";
@@ -93,7 +83,6 @@
     
     return cell;
 }
-
 
 -(IBAction)save{
     //書き込みしてます。
@@ -131,7 +120,6 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // データの呼び出しに成功!
-            
             NSLog(@"Successfully retrieved %d scores.", objects.count);
             //TestObjectに入ってるデータを表示する
             for (PFObject *object in objects) {
@@ -164,3 +152,4 @@
 }
 
 @end
+
