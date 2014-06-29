@@ -61,7 +61,23 @@
 {
     return [userArray count];
 }
-
+/*
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *cellIdentifer = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifer];
+    
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifer];
+    }
+    
+    cell.textLabel.text = [userArray objectAtIndex:indexPath.row];
+    //cell.imageView.image = [imageArray objectAtIndex:indexPath.row];
+    //cell.detailTextLabel.text = [proArray objectAtIndex:indexPath.row];
+    
+    return cell;
+}
+*/
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *cellIdentifer = @"Cell";
@@ -77,6 +93,7 @@
     
     return cell;
 }
+
 
 -(IBAction)save{
     //書き込みしてます。
