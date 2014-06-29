@@ -78,6 +78,13 @@
     return [userArray count];
 }
 
+
+//------------------------------------------------------------------------------------------------------------//
+   //---------------------------　ここが問題点↓（CellStyleがおかしい）　---------------------------//
+//------------------------------------------------------------------------------------------------------------//
+
+
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *cellIdentifer = @"Cell";
@@ -93,6 +100,10 @@
     
     return cell;
 }
+
+
+
+
 
 -(IBAction)save{
     //書き込みしてます。
@@ -130,7 +141,6 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // データの呼び出しに成功!
-            
             NSLog(@"Successfully retrieved %d scores.", objects.count);
             //TestObjectに入ってるデータを表示する
             for (PFObject *object in objects) {
@@ -161,14 +171,5 @@
         }
     }];
 }
-
-
-
-
-
-
-
-
-
 
 @end

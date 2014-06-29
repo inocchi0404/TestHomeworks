@@ -10,7 +10,8 @@
 
 @interface DetailViewController : UIViewController{
     IBOutlet UILabel *label;
-
+    NSMutableArray *userArray;
+    IBOutlet UITableView *table;
 }
 @property NSInteger rowNumber;
 @end

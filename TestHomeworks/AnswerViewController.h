@@ -24,5 +24,6 @@
     NSMutableArray *userArray;
 
 }
+-(IBAction)load;
 
 @end
