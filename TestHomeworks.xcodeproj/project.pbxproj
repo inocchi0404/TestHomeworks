@@ -35,6 +35,9 @@
 		D568CED0194D7DE200DE695F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D568CECF194D7DE200DE695F /* MobileCoreServices.framework */; };
 		D568CED2194D7DEE00DE695F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D568CED1194D7DEE00DE695F /* SystemConfiguration.framework */; };
 		D568CED4194D7DF800DE695F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D568CED3194D7DF800DE695F /* CFNetwork.framework */; };
+		D5A70B84195EFEDA00B18DBD /* AnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A70B83195EFEDA00B18DBD /* AnswerViewController.m */; };
+		D5A70B87195EFF0C00B18DBD /* PersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A70B86195EFF0C00B18DBD /* PersonViewController.m */; };
+		D5A70B8A195EFF2B00B18DBD /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A70B89195EFF2B00B18DBD /* QuestionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +85,12 @@
 		D568CECF194D7DE200DE695F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		D568CED1194D7DEE00DE695F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D568CED3194D7DF800DE695F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		D5A70B82195EFEDA00B18DBD /* AnswerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerViewController.h; sourceTree = "<group>"; };
+		D5A70B83195EFEDA00B18DBD /* AnswerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerViewController.m; sourceTree = "<group>"; };
+		D5A70B85195EFF0C00B18DBD /* PersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonViewController.h; sourceTree = "<group>"; };
+		D5A70B86195EFF0C00B18DBD /* PersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonViewController.m; sourceTree = "<group>"; };
+		D5A70B88195EFF2B00B18DBD /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
+		D5A70B89195EFF2B00B18DBD /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +179,12 @@
 				D5593EF9194D66C7008AFFA7 /* ViewController.m */,
 				D5593F21194D757B008AFFA7 /* DetailViewController.h */,
 				D5593F22194D757B008AFFA7 /* DetailViewController.m */,
+				D5A70B82195EFEDA00B18DBD /* AnswerViewController.h */,
+				D5A70B83195EFEDA00B18DBD /* AnswerViewController.m */,
+				D5A70B85195EFF0C00B18DBD /* PersonViewController.h */,
+				D5A70B86195EFF0C00B18DBD /* PersonViewController.m */,
+				D5A70B88195EFF2B00B18DBD /* QuestionViewController.h */,
+				D5A70B89195EFF2B00B18DBD /* QuestionViewController.m */,
 				D568CEC1194D7D7E00DE695F /* Parse.framework */,
 				D5593EFB194D66C7008AFFA7 /* Images.xcassets */,
 				D5593EEA194D66C7008AFFA7 /* Supporting Files */,
@@ -309,7 +324,10 @@
 				D5593F23194D757B008AFFA7 /* DetailViewController.m in Sources */,
 				D5593EFA194D66C7008AFFA7 /* ViewController.m in Sources */,
 				D5593EF4194D66C7008AFFA7 /* AppDelegate.m in Sources */,
+				D5A70B8A195EFF2B00B18DBD /* QuestionViewController.m in Sources */,
 				D5593EF0194D66C7008AFFA7 /* main.m in Sources */,
+				D5A70B84195EFEDA00B18DBD /* AnswerViewController.m in Sources */,
+				D5A70B87195EFF0C00B18DBD /* PersonViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

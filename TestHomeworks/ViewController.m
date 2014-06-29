@@ -123,7 +123,6 @@
             // データの呼び出しに失敗
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         } }];
-    
 }
 
 -(IBAction)saveparse:(id)sender{
@@ -142,13 +141,11 @@
             // データの呼び出しに失敗
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         } }];
-    
 }
 -(IBAction)loadParse:(id)sender{
     //読み込み
     PFQuery *query = [PFQuery queryWithClassName:@"User"];
     //[query whereKey:@"password" equalTo:@"test"];
-    
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
@@ -163,8 +160,6 @@
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
     }];
-    
-    
 }
 
 
