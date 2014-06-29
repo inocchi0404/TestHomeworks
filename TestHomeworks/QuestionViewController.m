@@ -35,7 +35,7 @@
                   [UIImage imageNamed:@"まっしー.jpg"],
                   [UIImage imageNamed:@"inocchi.jpg"], nil];
     
-    PFQuery *query = [PFQuery queryWithClassName:@"User"];
+    PFQuery *query = [PFQuery queryWithClassName:@"Q"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // データの呼び出しに成功!
@@ -44,8 +44,8 @@
             //TestObjectに入ってるデータを表示する
             for (PFObject *object in objects) {
                 NSLog(@"id=%@", object.objectId);
-                NSLog(@"username=%@", object[@"username"]);
-                [userArray addObject:object[@"username"]];
+                NSLog(@"username=%@", object[@"name"]);
+                [userArray addObject:object[@"text"]];
                 [table reloadData];
             }
         } else {

@@ -36,7 +36,7 @@
                   [UIImage imageNamed:@"まっしー.jpg"],
                   [UIImage imageNamed:@"inocchi.jpg"], nil];
     
-    PFQuery *query = [PFQuery queryWithClassName:@"User"];
+    PFQuery *query = [PFQuery queryWithClassName:@"A"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // データの呼び出しに成功!
