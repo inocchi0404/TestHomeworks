@@ -24,7 +24,6 @@
     
     userArray = [[NSMutableArray alloc] init];
 
-    
     nameArray = [[NSMutableArray alloc]initWithObjects:
                  @"az",
                  @"inocchi",
@@ -39,7 +38,6 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // データの呼び出しに成功!
-            
             NSLog(@"Successfully retrieved %d scores.", objects.count);
             //TestObjectに入ってるデータを表示する
             for (PFObject *object in objects) {
@@ -104,7 +102,6 @@
 }
 
 -(IBAction)load{
-    
     //Userに保存されているデータを全部持ってくる
     PFQuery *query = [PFQuery queryWithClassName:@"User"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -122,7 +119,7 @@
         } else {
             // データの呼び出しに失敗
             NSLog(@"Error: %@ %@", error, [error userInfo]);
-        } }];
+        }}];
 }
 
 -(IBAction)saveparse:(id)sender{

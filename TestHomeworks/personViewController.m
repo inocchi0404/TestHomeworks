@@ -15,21 +15,26 @@
 
 @implementation PersonViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	// Do any additional setup after loading the view, typically from a nib.
     table.delegate = self;
     table.dataSource = self;
+    
+    userArray = [[NSMutableArray alloc] init];
+    
+    
+    nameArray = [[NSMutableArray alloc]initWithObjects:
+                 @"az",
+                 @"inocchi",
+                 @"massy", nil];
+    
+    imageArray = [[NSMutableArray alloc]initWithObjects:
+                  [UIImage imageNamed:@"azu.jpg"],
+                  [UIImage imageNamed:@"まっしー.jpg"],
+                  [UIImage imageNamed:@"inocchi.jpg"], nil];
     
     PFQuery *query = [PFQuery queryWithClassName:@"User"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -48,6 +53,7 @@
             // データの呼び出しに失敗
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         } }];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -114,7 +120,6 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // データの呼び出しに成功!
-            
             NSLog(@"Successfully retrieved %d scores.", objects.count);
             //TestObjectに入ってるデータを表示する
             for (PFObject *object in objects) {
@@ -147,3 +152,4 @@
 }
 
 @end
+

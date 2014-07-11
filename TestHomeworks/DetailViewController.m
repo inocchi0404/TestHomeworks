@@ -30,13 +30,14 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     NSLog(@"aaa%lu",_rowNumber);
+    
+    // @"aaa%d"をユーザーネームにする
     label.text = [NSString stringWithFormat:@"aaa%d",_rowNumber];
     
     PFQuery *query = [PFQuery queryWithClassName:@"User"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
-            // データの呼び出しに成功!
-            
+             // データの呼び出しに成功!
             NSLog(@"Successfully retrieved %d scores.", objects.count);
             //TestObjectに入ってるデータを表示する
             for (PFObject *object in objects) {
@@ -49,7 +50,6 @@
             // データの呼び出しに失敗
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         } }];
- 
 }
 
 - (void)didReceiveMemoryWarning
