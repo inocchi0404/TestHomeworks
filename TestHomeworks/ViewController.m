@@ -24,15 +24,9 @@
     
     userArray = [[NSMutableArray alloc] init];
 
-    nameArray = [[NSMutableArray alloc]initWithObjects:
-                 @"az",
-                 @"inocchi",
-                 @"massy", nil];
+    nameArray = [[NSMutableArray alloc]init];
     
-    imageArray = [[NSMutableArray alloc]initWithObjects:
-                  [UIImage imageNamed:@"azu.jpg"],
-                  [UIImage imageNamed:@"まっしー.jpg"],
-                  [UIImage imageNamed:@"inocchi.jpg"], nil];
+    imageArray = [[NSMutableArray alloc]init];
     
     PFQuery *query = [PFQuery queryWithClassName:@"User"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -50,7 +44,6 @@
             // データの呼び出しに失敗
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         } }];
-
 }
 
 //画面遷移する直前に呼ばれる

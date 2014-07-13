@@ -25,15 +25,9 @@
     
     userArray = [[NSMutableArray alloc] init];
     
-    nameArray = [[NSMutableArray alloc]initWithObjects:
-                 @"az",
-                 @"inocchi",
-                 @"massy", nil];
+    nameArray = [[NSMutableArray alloc]init];
     
-    imageArray = [[NSMutableArray alloc]initWithObjects:
-                  [UIImage imageNamed:@"azu.jpg"],
-                  [UIImage imageNamed:@"まっしー.jpg"],
-                  [UIImage imageNamed:@"inocchi.jpg"], nil];
+    imageArray = [[NSMutableArray alloc]init];
     
     PFQuery *query = [PFQuery queryWithClassName:@"Q"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -82,6 +76,8 @@
     
     return cell;
 }
+
+
 
 -(IBAction)save{
     //書き込みしてます。
