@@ -29,10 +29,13 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    UITextField *textField = [[UITextField alloc ]init] ;
+    
     naiyou.delegate = self;
     naiyou.returnKeyType = UIReturnKeyDone;
     
     textField.delegate = self;
+    textField.placeholder = @"ここに内容を入力してkudasai";
 }
 
 - (void)didReceiveMemoryWarning

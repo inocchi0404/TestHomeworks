@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="jIG-2A-yMt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3UZ-ea-IPH">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="KJf-Ph-FRn">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="3UZ-ea-IPH" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ptu-Hm-0FX">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="jIG-2A-yMt" kind="relationship" relationship="rootViewController" id="RVn-i5-6rl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vwm-Gk-iMc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-745" y="-676"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="q86-3b-Z51">
             <objects>
@@ -23,7 +38,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="modal" id="Ecr-YO-HcH"/>
+                                    <segue destination="vXZ-lx-hvc" kind="push" id="Ecr-YO-HcH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iir-5D-gBm">
@@ -33,7 +48,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Job-s3-gBy" kind="modal" id="Slb-SV-zoE"/>
+                                    <segue destination="Job-s3-gBy" kind="push" id="Slb-SV-zoE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MqX-NN-TaM">
@@ -43,7 +58,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="P6Y-T6-UH5" kind="modal" id="yiX-4k-h0A"/>
+                                    <segue destination="P6Y-T6-UH5" kind="push" id="yiX-4k-h0A"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vdf-MQ-8Wo">
@@ -53,7 +68,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="bdC-Gp-B4N" kind="modal" id="A8h-uG-tJe"/>
+                                    <segue destination="bdC-Gp-B4N" kind="push" id="A8h-uG-tJe"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPW-7E-yaf">
@@ -69,10 +84,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Qaj-H0-Vs1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sdf-EK-VQq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-73" y="-741"/>
+            <point key="canvasLocation" x="-140" y="-724"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -115,7 +131,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="pGp-bR-ByT" kind="modal" identifier="selectRow" id="NrJ-b8-z9Z"/>
+                                            <segue destination="pGp-bR-ByT" kind="push" identifier="selectRow" id="NrJ-b8-z9Z"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -241,6 +257,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B66-QM-dNI">
+                                <rect key="frame" x="9" y="21" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="戻る">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="jIG-2A-yMt" kind="push" id="Txe-p9-adA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -251,7 +277,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Caw-bn-Gxn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-543" y="-1537"/>
+            <point key="canvasLocation" x="-745" y="-1555"/>
         </scene>
         <!--Person View Controller-->
         <scene sceneID="npH-gH-6XQ">
@@ -271,7 +297,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="JKo-fm-XnH" detailTextLabel="wDh-eO-Tsn" rowHeight="142" style="IBUITableViewCellStyleSubtitle" id="FIl-5A-BxY">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="142"/>
+                                        <rect key="frame" x="0.0" y="86" width="320" height="142"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FIl-5A-BxY" id="3Ky-42-Aad">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="141"/>
@@ -325,7 +351,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="pnQ-NB-GE0" detailTextLabel="IRK-Co-DZx" rowHeight="142" style="IBUITableViewCellStyleSubtitle" id="tQW-xs-diT">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="142"/>
+                                        <rect key="frame" x="0.0" y="86" width="320" height="142"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tQW-xs-diT" id="Pss-Yl-EmQ">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="141"/>
@@ -435,6 +461,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="8rs-0k-SWj"/>
+        <segue reference="Ecr-YO-HcH"/>
+        <segue reference="Txe-p9-adA"/>
     </inferredMetricsTieBreakers>
 </document>
