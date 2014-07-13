@@ -60,7 +60,10 @@
     if ([[segue identifier] isEqualToString:@"selectRow"]) {
         //データの受け渡しをしてます
         DetailViewController *vcntl = [segue destinationViewController];    // <- 1
-        vcntl.rowNumber = [table indexPathForSelectedRow].row;    // <- 2
+        vcntl.rowNumber = [[table indexPathForSelectedRow] row];    // <- 2
+        NSInteger row =[[table indexPathForSelectedRow] row];
+        vcntl.name = [userArray objectAtIndex:row];
+        NSLog(@"データを渡します。%d",[[table indexPathForSelectedRow] row]);
     }
 }
 

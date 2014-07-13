@@ -15,6 +15,8 @@
 @end
 
 @implementation DetailViewController
+@synthesize name;
+@synthesize rowNumber;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,10 +31,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    NSLog(@"aaa%lu",_rowNumber);
-    
+    NSLog(@"aaa%lu",rowNumber);
+    int number = (int) rowNumber;
+    NSLog(@"name=%@",name);
+    label.text = name;
     // @"aaa%d"をユーザーネームを表示にする
-    label.text = [NSString stringWithFormat:@"aaa%d",_rowNumber];
+   // label.text = [NSString stringWithFormat:@"%d",number];
     
     PFQuery *query = [PFQuery queryWithClassName:@"User"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {

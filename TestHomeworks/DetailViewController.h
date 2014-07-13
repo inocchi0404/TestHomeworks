@@ -15,4 +15,6 @@
     IBOutlet UITableView *table;
 }
 @property NSInteger rowNumber;
+@property NSString *name;
+
 @end
