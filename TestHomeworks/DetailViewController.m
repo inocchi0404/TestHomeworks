@@ -31,7 +31,7 @@
 	// Do any additional setup after loading the view.
     NSLog(@"aaa%lu",_rowNumber);
     
-    // @"aaa%d"をユーザーネームにする
+    // @"aaa%d"をユーザーネームを表示にする
     label.text = [NSString stringWithFormat:@"aaa%d",_rowNumber];
     
     PFQuery *query = [PFQuery queryWithClassName:@"User"];
