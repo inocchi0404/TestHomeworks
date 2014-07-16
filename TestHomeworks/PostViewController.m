@@ -31,8 +31,8 @@
     
     UITextField *textField = [[UITextField alloc ]init] ;
     
-    naiyou.delegate = self;
-    naiyou.returnKeyType = UIReturnKeyDone;
+    self.naiyou.delegate = self;
+    self.naiyou.returnKeyType = UIReturnKeyDone;
     
     textField.delegate = self;
     textField.placeholder = @"ここに内容を入力してkudasai";
@@ -50,13 +50,14 @@
     PFObject *Q = [PFObject objectWithClassName:@"Q"];
     Q[@"image"] = @"az.jpg";
     Q[@"name"] = username1.text;
-    Q[@"text"] = naiyou.text;
+    Q[@"text"] = _naiyou.text;
     
     [Q saveInBackground];
 }
 
- - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-     [naiyou resignFirstResponder];
+- (BOOL)textFieldShouldReturn:(UITextView *)textView{
+    // キーボードを消す
+    [self.naiyou resignFirstResponder] ;
     return YES;
 }
 

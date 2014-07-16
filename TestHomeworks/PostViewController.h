@@ -12,8 +12,11 @@
 @interface PostViewController : UIViewController
 {
     IBOutlet UITextField *username1;
-    IBOutlet UITextView *naiyou;
+    //IBOutlet UITextView *naiyou;
 
 }
+
+@property (weak,nonatomic) IBOutlet UITextView *naiyou;
+
 
 @end
