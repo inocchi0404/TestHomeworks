@@ -13,11 +13,11 @@
 @interface PostViewController : UIViewController<UITextFieldDelegate>
 {
     IBOutlet UITextField *username1;
+    IBOutlet UIImage *image;
     IBOutlet UITextField *naiyou;
 
 }
 
 //@property (weak,nonatomic) IBOutlet UITextView *naiyou;
-
 
 @end

@@ -30,8 +30,6 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-   // UITextField *textField = [[UITextField alloc ]init] ;
-    
     naiyou.delegate = self;
     naiyou.returnKeyType = UIReturnKeyDone;
     
@@ -50,8 +48,14 @@
     Q[@"image"] = @"az.jpg";
     Q[@"name"] = username1.text;
     Q[@"text"] = naiyou.text;
-    
     [Q saveInBackground];
+}
+
+-(IBAction)photo:(id)sender{
+    NSLog(@"画像送信");
+    PFObject *pht = [PFObject objectWithClassName:@"P"];
+    pht[@"image"] = image.images;
+    [pht saveInBackground];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
