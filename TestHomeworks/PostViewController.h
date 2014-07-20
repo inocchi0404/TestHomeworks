@@ -10,7 +10,7 @@
 #import <Parse/Parse.h>
 #import <QuartzCore/QuartzCore.h>
 
-@interface PostViewController : UIViewController
+@interface PostViewController : UIViewController<UITextFieldDelegate>
 {
     IBOutlet UITextField *username1;
     IBOutlet UITextField *naiyou;

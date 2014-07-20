@@ -165,7 +165,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="DEh-vO-Yf3" detailTextLabel="Flz-Ub-hUn" rowHeight="142" style="IBUITableViewCellStyleSubtitle" id="tYd-m3-lia">
-                                        <rect key="frame" x="0.0" y="86" width="320" height="142"/>
+                                        <rect key="frame" x="0.0" y="22" width="320" height="142"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tYd-m3-lia" id="DTQ-qr-5rU">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="141"/>
@@ -261,7 +261,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="naiyou" destination="UDS-iT-Nn0" id="a3V-4U-Ij7"/>
+                        <outlet property="naiyou" destination="hzI-2f-b93" id="XL8-YN-qlp"/>
                         <outlet property="username1" destination="hzI-2f-b93" id="lei-k3-ve4"/>
                     </connections>
                 </viewController>
@@ -457,7 +457,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="RVn-i5-6rl"/>
+        <segue reference="Txe-p9-adA"/>
         <segue reference="Ecr-YO-HcH"/>
     </inferredMetricsTieBreakers>
 </document>
