@@ -8,15 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface PostViewController : UIViewController
 {
     IBOutlet UITextField *username1;
-    //IBOutlet UITextView *naiyou;
+    IBOutlet UITextField *naiyou;
 
 }
 
-@property (weak,nonatomic) IBOutlet UITextView *naiyou;
+//@property (weak,nonatomic) IBOutlet UITextView *naiyou;
 
 
 @end

@@ -8,6 +8,7 @@
 
 #import "PostViewController.h"
 #import <Parse/Parse.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface PostViewController ()
 
@@ -31,11 +32,9 @@
     
     UITextField *textField = [[UITextField alloc ]init] ;
     
-    self.naiyou.delegate = self;
-    self.naiyou.returnKeyType = UIReturnKeyDone;
+    naiyou.delegate = self;
+    naiyou.returnKeyType = UIReturnKeyDone;
     
-    textField.delegate = self;
-    textField.placeholder = @"ここに内容を入力してkudasai";
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,14 +49,14 @@
     PFObject *Q = [PFObject objectWithClassName:@"Q"];
     Q[@"image"] = @"az.jpg";
     Q[@"name"] = username1.text;
-    Q[@"text"] = _naiyou.text;
+    Q[@"text"] = naiyou.text;
     
     [Q saveInBackground];
 }
 
-- (BOOL)textFieldShouldReturn:(UITextView *)textView{
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
     // キーボードを消す
-    [self.naiyou resignFirstResponder] ;
+    [naiyou resignFirstResponder] ;
     return YES;
 }
 
