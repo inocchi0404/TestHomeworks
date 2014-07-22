@@ -44,20 +44,23 @@
 -(IBAction)question:(id)sender{
     NSLog(@"書き込みします");
     //書き込みしてます。
-    PFObject *Q = [PFObject objectWithClassName:@"Q"];
-    Q[@"image"] = @"az.jpg";
-    Q[@"name"] = username1.text;
-    Q[@"text"] = naiyou.text;
-    [Q saveInBackground];
+    PFObject *que = [PFObject objectWithClassName:@"Q"];
+    que[@"image"] = @"az.jpg";
+    que[@"name"] = username1.text;
+    que[@"text"] = naiyou.text;
+    [que saveInBackground];
 }
 
+/*
 -(IBAction)photo:(id)sender{
     NSLog(@"画像送信");
     PFObject *pht = [PFObject objectWithClassName:@"P"];
     pht[@"image"] = image.images;
     [pht saveInBackground];
 }
+*/ 
 
+//キーボードを消す
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     // キーボードを消す
     [naiyou resignFirstResponder] ;
