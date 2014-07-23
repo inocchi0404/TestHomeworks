@@ -67,4 +67,31 @@
     return YES;
 }
 
+-(IBAction)cameraButtonTouched:(id)sender{
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera ]) {
+        UIImagePickerController *imagePickerController = [[UIImagePickerController alloc]init];
+        [imagePickerController setSourceType:UIImagePickerControllerSourceTypeCamera];
+        [imagePickerController setAllowsEditing:YES];
+        [imagePickerController setDelegate:self];
+        
+        [self presentedViewController:imagePickerController animated:YES completion:nil];
+    }
+    else
+    {
+        NSLog(@"camera invalid");
+    }
+}
+
+-(IBAction)libraryButtonTouched:(id)sender{
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
+        UIImagePickerController *photoPickerController = [[UIImagePickerController alloc]init];
+        [UIImagePickerController setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+        [imagePickerCountroller setAllowsEding:YES];
+        [imagePickerCountroller setDelegate:self];
+    }
+    else{
+        NSLog(@"photo library invaild");
+    }
+}
+
 @end

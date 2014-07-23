@@ -10,8 +10,11 @@
 #import <Parse/Parse.h>
 #import <QuartzCore/QuartzCore.h>
 
-@interface PostViewController : UIViewController<UITextFieldDelegate>
+@interface PostViewController : UIViewController<UITextFieldDelegate,UINavigationControllerDelegate
+/*,UIImagePickerControllerDelegate,UIPopoverControllerDelegate */>
 {
+    //UIPopoverController *popover;
+    
     IBOutlet UITextField *username1;
     IBOutlet UIImage *image;
     IBOutlet UITextField *naiyou;
