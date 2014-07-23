@@ -86,8 +86,8 @@
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
         UIImagePickerController *photoPickerController = [[UIImagePickerController alloc]init];
         [UIImagePickerController setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
-        [imagePickerCountroller setAllowsEding:YES];
-        [imagePickerCountroller setDelegate:self];
+        [photoPickerController setAllowsEditing:YES];
+        [photoPickerController setDelegate:self];
     }
     else{
         NSLog(@"photo library invaild");
