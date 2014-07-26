@@ -69,7 +69,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifer];
     }
     
-    cell.textLabel.text = [userArray objectAtIndex:indexPath.row];
+    cell.textLabel.text = [userArray objectAtIndex:[userArray count] - indexPath.row - 1];
     // cell.imageView.image = [imageArray objectAtIndex:indexPath.row];
     //cell.detailTextLabel.text = [proArray objectAtIndex:indexPath.row];
     

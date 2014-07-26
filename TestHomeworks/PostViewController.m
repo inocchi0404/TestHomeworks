@@ -67,6 +67,7 @@
     return YES;
 }
 
+/*
 -(IBAction)cameraButtonTouched:(id)sender{
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera ]) {
         UIImagePickerController *imagePickerController = [[UIImagePickerController alloc]init];
@@ -93,5 +94,5 @@
         NSLog(@"photo library invaild");
     }
 }
-
+*/
 @end
