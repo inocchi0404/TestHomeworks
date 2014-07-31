@@ -11,7 +11,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 @interface PostViewController : UIViewController<UITextFieldDelegate,UINavigationControllerDelegate
-/*,UIImagePickerControllerDelegate,UIPopoverControllerDelegate */>
+,UIImagePickerControllerDelegate /*UIPopoverControllerDelegate */>
 {
     //UIPopoverController *popover;
     

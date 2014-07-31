@@ -67,15 +67,20 @@
     return YES;
 }
 
-/*
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [[picker presentedViewController] dismissViewControllerAnimated:YES completion:nil];
+    //s[[picker2 presentedViewController] dismissViewControllerAnimated:YES completion:nil];
+}
+
 -(IBAction)cameraButtonTouched:(id)sender{
-    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera ]) {
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         UIImagePickerController *imagePickerController = [[UIImagePickerController alloc]init];
         [imagePickerController setSourceType:UIImagePickerControllerSourceTypeCamera];
         [imagePickerController setAllowsEditing:YES];
         [imagePickerController setDelegate:self];
         
-        [self presentedViewController:imagePickerController animated:YES completion:nil];
+        [self presentViewController:imagePickerController animated:YES completion:nil];
     }
     else
     {
@@ -83,16 +88,21 @@
     }
 }
 
+/*
 -(IBAction)libraryButtonTouched:(id)sender{
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
         UIImagePickerController *photoPickerController = [[UIImagePickerController alloc]init];
         [UIImagePickerController setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
         [photoPickerController setAllowsEditing:YES];
         [photoPickerController setDelegate:self];
+        [self presentViewController:photoPickerController animated:YES completion:nil];
+ 
+ 
     }
     else{
         NSLog(@"photo library invaild");
     }
 }
 */
+
 @end
